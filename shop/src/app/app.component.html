@@ -4,21 +4,9 @@
     Welcome to {{title}}!
   </h1>
 </div>
-<div>
+<div class="container">
   <app-cart></app-cart>
 </div>
-<div *ngFor="let product of products">
-  <h2>
-    Product info: 
-  </h2>
-  <h5>Name: {{product.name}}</h5>
-  <h5>Description: {{product.description}}</h5>
-  <h5>Price: {{product.price}}</h5>
-  <h5>Category: {{product.category}}</h5>
-  <h5>Available: {{product.isAvailable}}</h5>
-  <h5>Ingredients:</h5>
-    <div *ngFor="let ingredient of product.ingredients"><span>{{ingredient}}</span></div>
-  <h5>Equivalents:</h5>
-    <div *ngFor="let equivalent of product.equivalents"><span>{{equivalent}}</span></div>
-  <input type="button" value="Buy" (click)="onBuy(product.name)">
+<div class="container">
+  <app-products (addToCart)="addToCart($event)"></app-products>
 </div>

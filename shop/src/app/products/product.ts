@@ -3,7 +3,7 @@ export class Product {
   description: string;
   price: number;
   category: Category;
-  isAvailable: boolean;
+  isAvailable?: boolean;
   ingredients: Array<string>;
   equivalents: Array<string>;
 }
