@@ -30,4 +30,11 @@ export class CartService {
     var index = this.products.indexOf(product);
     this.products.splice(index, 1);
   }
+
+  removeByName(productName: string): void {
+    var productsToDelete = this.products.filter(p => p.name == productName);
+    for (var i = 0, l = productsToDelete.length; i < l; i++){
+      this.removeProduct(productsToDelete[i]);
+    }
+  }
 }

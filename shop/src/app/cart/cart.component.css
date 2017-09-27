@@ -1,4 +1,7 @@
-h3 {
-    margin-top: 5px;
-    margin-bottom: 2px;
+.heading {
+    font-size: 20px;
+}
+
+.total {
+    float: right
 }

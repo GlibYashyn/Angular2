@@ -1,3 +1,11 @@
 <span [ngClass]="styles">
-  {{product.name}}
+  <span>
+    {{product.name}}
+  </span>
+  <span class="cart-item-quantity">
+    {{quantity}}
+  </span>
+  <input type="button" value="+" (click)="addItem()" class="btn btn-default btn-add-item" />
+  <input type="button" value="-" (click)="removeItem()" [disabled]="quantity == 1" class="btn btn-default btn-add-item" />
+  <input type="button" value="Remove" (click)="deleteItem()" class="btn btn-danger" />
 </span>

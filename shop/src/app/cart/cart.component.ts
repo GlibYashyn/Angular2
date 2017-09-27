@@ -13,12 +13,21 @@ export class CartComponent {
    }
 
   products: Product[];
+  total: number;
 
   reloadProducts(): void {
-    this.products = this.cartService.getProducts();
+    function onlyUnique(value, index, self) { 
+      return self.indexOf(value) === index;
+    }
+    this.products = this.cartService.getProducts().filter(onlyUnique);
+    this.updateTotal();
+  }
+
+  updateTotal(): void {
+    this.total = this.cartService.getTotal();
   }
 
   removeProduct(product: Product): void {
-    this.cartService.removeProduct(product);
+    this.reloadProducts();
   }
 }
