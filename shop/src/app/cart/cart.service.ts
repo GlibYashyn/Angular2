@@ -26,6 +26,12 @@ export class CartService {
     this.products.push(product);
   }
 
+  addProductWithQuantity(product: Product, quantity: number): void {
+    for (var i = 0; i < quantity; i++){
+      this.addProduct(product);
+    }
+  }
+
   removeProduct(product: Product): void {
     var index = this.products.indexOf(product);
     this.products.splice(index, 1);
@@ -36,5 +42,9 @@ export class CartService {
     for (var i = 0, l = productsToDelete.length; i < l; i++){
       this.removeProduct(productsToDelete[i]);
     }
+  }
+
+  clear(): void {
+    this.products.splice(0, this.products.length);
   }
 }

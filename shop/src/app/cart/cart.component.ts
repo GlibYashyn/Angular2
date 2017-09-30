@@ -30,4 +30,9 @@ export class CartComponent {
   removeProduct(product: Product): void {
     this.reloadProducts();
   }
+
+  clearCart(): void {
+    this.cartService.clear();
+    this.reloadProducts();
+  }
 }

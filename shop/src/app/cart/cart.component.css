@@ -5,3 +5,7 @@
 .total {
     float: right
 }
+
+.btn-remove-all{
+    margin: 0 0 15px 15px;
+}

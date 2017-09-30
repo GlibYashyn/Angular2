@@ -11,5 +11,8 @@
     <div class="panel-body">
       <app-cart-item *ngFor="let product of products" [product]="product" (removeProduct)="removeProduct($event)" (updateTotal)="updateTotal()"></app-cart-item>
     </div>
+    <div>
+      <input type="button" value="Remove all" (click)="clearCart()" class="btn btn-warning btn-remove-all" />
+    </div>
   </div>
 </div>

@@ -2,4 +2,7 @@
   <div class="col-sm-4" *ngFor="let product of products">
     <app-product-item [product]="product" (addToCart)="addProductToCart($event)"></app-product-item>
   </div>
+  <span>
+    {{today}}
+  </span>
 </div>
