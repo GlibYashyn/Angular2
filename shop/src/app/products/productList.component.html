@@ -3,6 +3,6 @@
     <app-product-item [product]="product" (addToCart)="addProductToCart($event)"></app-product-item>
   </div>
   <span>
-    {{today}}
+    {{today | date:"medium"}}
   </span>
 </div>

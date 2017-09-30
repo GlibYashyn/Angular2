@@ -5,8 +5,8 @@
     </h3>
   </div>
   <div class="panel-body">
-    <h5>Description: {{product.description | TitleCase}}</h5>
-    <h5>Price: {{product.price}}</h5>
+    <h5>Description: {{product.description | titlecase}}</h5>
+    <h5>Price: {{product.price | currency:"USD":"code"}}</h5>
     <h5>Ingredients:</h5>
     <div class="well well-sm">
       <div *ngFor="let ingredient of product.ingredients">{{ingredient}}</div>

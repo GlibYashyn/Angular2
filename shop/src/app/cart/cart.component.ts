@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CartService } from './cart.service';
 import { Product } from '../products/product';
+import { OrderedByPipe } from './ordered-by.pipe';
 
 @Component({
   selector: 'app-cart',

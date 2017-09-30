@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Optional } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { ProductsService } from './products.service';
 import { Product } from './product'
 import { ConfigOptionsService } from '../services/config-options.service';
