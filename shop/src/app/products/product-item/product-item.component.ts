@@ -1,4 +1,5 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { TitleCasePipe } from '@angular/common';
 import { Product } from "../product";
 
 @Component({
