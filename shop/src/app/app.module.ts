@@ -9,6 +9,7 @@ import { ConstantsService } from './services/constants.service';
 import { GeneratorService } from './services/generator.service';
 import { RandomFactory, App_Id } from './services/random-factory';
 import { ColorChangedDirective } from './directives/color-changed.directive';
+import { LocalStorageService } from './services/local-storage.service';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ColorChangedDirective } from './directives/color-changed.directive';
   ],
   bootstrap: [AppComponent],
   providers: [
+    LocalStorageService,
     ConfigOptionsService,
     { provide: ConstantsService, useValue: {App: "Products", Ver: "1.0"} },
   ]
